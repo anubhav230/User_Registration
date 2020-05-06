@@ -1,21 +1,10 @@
 #!/bin/bash -x
+read -p "Enter mobile number: " mNumber
+numberPattern="^[1-9]{2}[\ ]{1}[0-9]{10}$"
 
-read -p "Enter first name: " firstName
-firstNamePattern="^[A-z]{1}[a-z]{2,10}$"
-if [[ $firstName =~ $firstNamePattern ]]
+if [[ $mNumber =~ $numberPattern ]]
 then
         echo "done"
 else
-        echo "invalid first name"
-
-fi
-
-read -p "Enter last name: " lastName
-lastNamePattern="^[A-Z]{1}[a-z]{2,10}$"
-
-if [[ $lastName =~ $lastNamePattern ]]
-then
-        echo "done"
-else
-        echo "invalid last name"
+        echo "invalid number"
 fi
