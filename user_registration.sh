@@ -1,9 +1,6 @@
 #!/bin/bash -x
-<<<<<<< HEAD
-=======
 
 
->>>>>>> uc7
 read -p "Enter first name: " firstName
 firstNamePattern="^[[:upper:]]{1}[[:lower:]]{2,15}$"
 if [[ $firstName =~ $firstNamePattern ]]
@@ -34,10 +31,7 @@ else
         echo "invalid"
 fi
 
-<<<<<<< HEAD
 
-=======
->>>>>>> uc7
 read -p "Enter mobile number: " mNumber
 numberPattern="^[1-9]{2,5}[\ ]{1}[1-9]{1}[0-9]{9}$"
 
