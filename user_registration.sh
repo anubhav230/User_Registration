@@ -40,3 +40,35 @@ then
 else
         echo "invalid number"
 fi
+
+
+
+
+read -p "Enter password: " password1
+pwdPattern="^[0-9 a-z A-Z \! \@ \#\$\%\^\&\*]{8}$"
+if [[ $password =~ $pwdPattern ]]
+then
+        echo "valid"
+else
+        echo "invalid"
+fi
+
+read -p "Enter password 2: " password2
+pwdPattern2="(?=.*[A-Z])[a-zA-Z]{8}"
+if [[ $password2 =~ $pwdPattern2 ]]
+then
+        echo "valid"
+else
+        echo "invalid"
+fi
+
+
+
+read -p "Enter password 2: " password3
+pwdPattern3="(?=.*[A-Z])(?=.*\d)[a-zA-Z0-9]{8}"
+if [[ $password3 =~ $pwdPattern2 ]]
+then
+        echo "valid"
+else
+        echo "invalid"
+fi
